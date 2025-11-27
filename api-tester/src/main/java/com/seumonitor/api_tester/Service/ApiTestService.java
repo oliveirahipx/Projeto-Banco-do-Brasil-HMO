@@ -18,13 +18,13 @@ import java.util.stream.LongStream;
 import java.util.Collections;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.time.LocalDateTime;
+
 
 @Service
 public class ApiTestService {
 
     // --- Configurações de SLA ---
-    private static final long MAX_LATENCY_MS = 500;
+    private static final long MAX_LATENCY_MS = 50000;
     private static final String EXPECTED_CONTENT_TYPE = "application/json";
 
     private final RestTemplate restTemplate;
@@ -66,7 +66,7 @@ public class ApiTestService {
                 // 1. VALIDAÇÃO DE SLA: Latência
                 latencyCheck = latency <= MAX_LATENCY_MS;
                 if (!latencyCheck) {
-                    messageDetails += " (Falha SLA: Latência acima de " + MAX_LATENCY_MS + "ms: " + latency + "ms)";
+                    messageDetails += " (Latência acima de " + MAX_LATENCY_MS + "ms: " + latency + "ms)";
                 }
 
                 // 2. VALIDAÇÃO DE SLA: Content Type
@@ -155,9 +155,6 @@ public class ApiTestService {
         return contentType != null && contentType.toLowerCase().contains(EXPECTED_CONTENT_TYPE);
     }
 
-    // ----------------------------------------------------
-    // --- LÓGICA DE AGREGAÇÃO DE DADOS (RESUMO E GRÁFICO) ---
-    // ----------------------------------------------------
 
     /**
      * Busca todos os resultados de teste e os agrega para gerar o SummaryDto.

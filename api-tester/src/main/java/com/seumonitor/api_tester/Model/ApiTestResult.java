@@ -24,7 +24,7 @@ public class ApiTestResult {
     private long responseTimeMillis;
     private LocalDateTime testDateTime;
 
-    // Novos Getters e Setters
+
     // VALIDAÇÃO SLA
     private boolean isLatencyOk;     // Se a latência está dentro do limite (ex: < 500ms)
     private boolean isContentValid;  // Se o Content-Type esperado foi retornado
