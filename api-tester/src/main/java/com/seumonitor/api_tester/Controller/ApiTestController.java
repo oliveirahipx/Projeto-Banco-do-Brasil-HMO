@@ -1,5 +1,7 @@
 package com.seumonitor.api_tester.Controller;
-
+import com.seumonitor.api_tester.DTO.MultiTestRequest;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import com.seumonitor.api_tester.Model.ApiTestResult;
 import com.seumonitor.api_tester.Service.ApiTestService;
 import com.seumonitor.api_tester.Service.PdfExportService;
@@ -13,6 +15,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+
+import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -72,5 +76,17 @@ public class ApiTestController {
     public SummaryDto getSummary() {
         System.out.println("Recebida requisição para buscar dados de resumo.");
         return apiTestService.getSummaryData();
+    }
+    // Endpoint 5: Para executar múltiplos testes de uma vez
+    @PostMapping("/api/test/multiple")
+    public ResponseEntity<List<ApiTestResult>> testMultipleApis(@RequestBody MultiTestRequest request) {
+        System.out.println("Recebida requisição para executar múltiplos testes.");
+
+        List<ApiTestResult> results = apiTestService.runMultipleTests(request.getApiUrls());
+
+        if (results.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(results);
     }
 }
