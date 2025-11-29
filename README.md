@@ -12,11 +12,16 @@ Exportação de Relatórios: Geração de relatórios completos em formato PDF.
 
 Autenticação: Sistema básico de login e gerenciamento de configurações de usuário.
 
-Tecnologias Utilizadas
-Camada	         Tecnologia                    	Dependência Chave
-Backend	          Java 17+   	                   Spring Boot 3.x
-Persistência      PostgreSQL	                    Spring Data JPA (Hibernate)
-Testes HTTP	      Spring RestTemplate	            Spring Web
-Geração de PDF  	iText 7	                        com.itextpdf:itext7-core
-Frontend	        HTML5, CSS	                    Bootstrap Icons, Chart.js (Gráficos)
-Módulos JS	      ES6 Modules (import/export)     base.js, api.js, resultados.js
+O projeto utiliza as seguintes tecnologias em camadas:
+
+Backend (Java 17+ / Spring Boot 3.x)
+Persistência: PostgreSQL (via Spring Data JPA e Hibernate).
+
+Testes HTTP: Spring RestTemplate (utilizado para fazer as chamadas às APIs externas).
+
+Geração de PDF: iText 7 (com.itextpdf:itext7-core).
+
+Frontend (HTML5, CSS, JavaScript)
+Módulos JS: Arquitetura de Módulos ES6 (import/export) divididos em base.js, api.js, e resultados.js.
+
+Bibliotecas: Bootstrap Icons e Chart.js (para renderização de gráficos).
