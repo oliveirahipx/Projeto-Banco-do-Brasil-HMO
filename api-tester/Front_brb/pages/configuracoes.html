@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon-bb.svg">
+    <link rel="stylesheet" href="../dist/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="module" src="../assets/js/base.js"></script>
+    <script type="module" src="../assets/js/configuracoes.js"></script>
+
+    <title>Configurações</title>
+</head>
+<body class="page-configuracoes">
+<header>
+    <div class="logo">
+        <img src="../assets/images/logo-bb.webp" alt="Logo Banco do Brasil">
+    </div>
+    <div class="foto-perfil">
+        <img src="../assets/images/perfil.webp" alt="Avatar perfil">
+    </div>
+</header>
+<div class="layout">
+    <aside>
+        <nav class="sidebar">
+            <ul class="nav flex-column">
+                <li><a href="../pages/resumo.html"><i class="bi bi-journal-text"></i> Resumo</a></li>
+                <li><a href="../pages/api.html"><i class="bi bi-broadcast"></i> APIs</a></li>
+                <li><a href="../pages/resultados.html"><i class="bi bi-bar-chart"></i> Resultados</a></li>
+                <li><a href="../pages/configuracoes.html"><i class="bi bi-gear"></i> Configurações</a></li>
+                <li><a href="#" class="logout mt-auto logout-red logout-modal"><i
+                        class="bi bi-box-arrow-right"></i>
+                    Sair</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="main-content main-configuracoes">
+        <div class="configuracoes-topo">
+            <h1>Configurações</h1>
+        </div>
+
+        <form id="config-form">
+            <input type="hidden" id="user-id" value="">
+
+            <section class="conta">
+                <h2>Conta</h2>
+
+                <div class="input-email input-config">
+                    <label for="input-nome" class="form-label">Nome</label>
+                    <input type="text" id="input-nome" class="form-control" required>
+                </div>
+                <hr>
+
+                <div class="input-email input-config">
+                    <label for="input-email" class="form-label">Email</label>
+                    <input type="email" id="input-email" class="form-control" required>
+                </div>
+                <hr>
+
+                <div class="input-email input-config">
+                    <label for="input-senha" class="form-label">Senha (Deixe vazio para manter)</label>
+                    <input type="password" id="input-senha" class="form-control" placeholder="******">
+                </div>
+                <button id="btn-alterar" type="button">Alterar senha</button>
+            </section>
+
+            <section class="projeto">
+                <h2>Projeto</h2>
+
+                <div class="input-email input-config">
+                    <label for="input-projeto" class="form-label">Nome do projeto</label>
+                    <input type="text" id="input-projeto" class="form-control">
+                </div>
+                <hr>
+
+                <div class="input-email input-config">
+                    <label for="input-ambiente" class="form-label">Ambiente</label>
+                    <input type="text" id="input-ambiente" class="form-control" value="Exemplo">
+                </div>
+                <hr>
+
+                <div class="input-email input-config">
+                    <label for="input-url-base" class="form-label">URL Base</label>
+                    <input type="url" id="input-url-base" class="form-control">
+                </div>
+            </section>
+
+            <section class="notificacoes">
+                <h2>Notificações</h2>
+                <div class="texto-configuracoes checkbox-label">
+                    <input class="form-check-input" type="checkbox" id="notificacoes" name="notificacoes">
+                    <label for="notificacoes">Alertar falhas</label>
+                </div>
+                <hr>
+                <div class="texto-configuracoes">
+                    <p>Canal</p>
+                    <p class="texto-canal">exemplo</p>
+                </div>
+                <hr>
+                <div class="texto-configuracoes">
+                    <p>Frequência</p>
+                    <p class="texto-frequencia">exemplo</p>
+                </div>
+            </section>
+
+            <section class="texto-integracoes">
+                <h2>Integrações</h2>
+                <nav>
+                    <a href="#">Gerenciar integrações</a>
+                </nav>
+            </section>
+
+            <button type="submit" id="btn-salvar">Salvar alterações</button>
+        </form>
+    </main>
+</div>
+<dialog class="dialog-sair">
+    <p>Tem certeza que quer sair?</p>
+    <div class="container-btn">
+        <a href="../index.html">
+            <button class="btn-sim">Sim</button>
+        </a>
+        <button class="btn-nao">Não</button>
+    </div>
+</dialog>
+</body>
+
+</html>

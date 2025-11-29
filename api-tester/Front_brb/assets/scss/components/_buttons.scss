@@ -1,0 +1,56 @@
+@use "../../scss/base/index" as v;
+
+// btn-enter
+.btn-enter {
+    width: 500px;
+    display: block;
+    margin-top: 60px;
+
+    button {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        background-color: #053D8F;
+        border: none;
+        border-radius: 10px;
+        color: v.$cor-texto;
+        font-family: Poppins;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        box-shadow: 0 8px #003179;
+        transition: transform 0.1s ease;
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+} // fim btn-enter
+
+// btn-baixar
+.btn-baixar {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: v.$cor-secundaria;
+        color: v.$cor-texto;
+        border: none;
+        margin-right: 35px;
+        border-radius: 15px;
+        width: 175px;
+        height: 65px;
+        padding: 9px 16px 9px 20px;
+        font-weight: 500;
+        font-size: 1.2rem;
+        font-family: Poppins;
+        transition: all .12s ease-in;
+
+        &:hover {
+            background-color: #3d619663;
+        }
+
+    i {
+        font-size: 1.2rem;
+    }
+} // fim btn-baixar

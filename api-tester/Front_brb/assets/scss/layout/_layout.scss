@@ -1,0 +1,86 @@
+@use "../../scss/base/index" as v;
+
+// container-enter
+.container-enter {
+    width: 90%;
+    max-width: 600px;
+    height: min(720px, 90vh);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.116);
+    background: rgba(255, 255, 255, 0.075);
+    backdrop-filter: blur(20px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+
+    h1 {
+        color: #ffd100;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 3.4rem;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    p {
+        color: v.$cor-texto;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.2rem;
+        font-weight: 500;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+}
+
+// fim container-enter
+
+@media (max-width: 1440px) {
+    .container-enter {
+        width: 90%;
+        max-width: 580px;
+        height: min(670px, 85vh);
+    }
+}
+
+// container-email-senha
+.container-email-senha {
+    display: grid;
+    gap: 30px;
+}
+
+// fim container-email-senha
+
+
+// container-check-forgot
+.container-check-forgot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+    margin-top: 5px;
+}
+
+// container-ckeck-forgot
+
+// Layout de header-aside-main
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    flex-shrink: 0;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: v.$cor-fundo;
+}

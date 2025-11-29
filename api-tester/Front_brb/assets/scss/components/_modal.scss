@@ -1,0 +1,178 @@
+@use "../../scss/base/variables" as v;
+
+// DIALOG PARA SAIR DA PÁGINA
+.dialog-sair {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    width: 350px;
+    max-width: 90%;
+    font-size: 1.2rem;
+    color: #0B2343;
+    font-family: Poppins;
+    font-weight: 700;
+
+    .container-btn {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        width: 100%;
+    }
+
+    button {
+        background: #0B2343;
+        border-radius: 10px;
+        border: none;
+        color: v.$cor-texto;
+        padding: 5px 15px;
+        font-size: 1rem;
+        font-family: Poppins;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all .5s start-end;
+
+        &:hover {
+            transform: scale(0.92);
+            background: #0b2343c2;
+        }
+    }
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.384);
+}
+
+// DIALOG PARA ADICIONAR API
+.dialog-adicionar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 916px;
+    min-height: 480px;
+    max-height: 548px;
+    max-width: 90%;
+    z-index: 1;
+    
+    .container-dialog-add {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        gap: 29px;
+
+        #logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 75px;
+            height: 75px;
+            background-color: #12294B;
+            border-radius: 50%;
+
+            i {
+                color: #fff;
+                font-size: 2rem;
+            }
+        }
+
+        .container-text-add {
+            .texto1 {
+                color: #12294B;
+                font-family: Poppins;
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
+
+            .texto2 {
+               color: #12294B;
+               font-family: Poppins; 
+               font-weight: 500;
+               font-size: 1.2rem;
+            }
+
+            .formatos-add {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 29px;
+                width: 366px;
+                height: 40px;
+                border-radius: 18px;
+                background: rgba(18, 41, 75, 0.83);
+
+                .texto3 {
+                    color: rgba(255, 255, 255, 0.88);
+                    font-family: Poppins;
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .container-btn-add-cancel {
+        display: flex;
+        justify-content: center;
+        gap: 26px;
+        width: 100%;
+
+        .btn-cadastrar-add {
+            width: 170px;
+            height: 40px;
+            background: #12294B;
+            border-radius: 15px;
+            border: none;
+            color: v.$cor-texto;
+            padding: 5px 15px;
+            font-size: 0.950rem;
+            font-family: Poppins;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease-in;
+
+            &:hover {
+                background-color: #12294bc4;
+            }
+        }
+
+          .btn-cancelar-add {
+            width: 170px;
+            height: 40px;
+            background: none;
+            border-radius: 15px;
+            border: 1.5px solid #D30000;
+            color: #D30000;
+            padding: 5px 15px;
+            font-size: 0.950rem;
+            font-family: Poppins;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: #D30000;
+                color: v.$cor-texto;
+            }
+        }
+    }
+
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.384);
+}

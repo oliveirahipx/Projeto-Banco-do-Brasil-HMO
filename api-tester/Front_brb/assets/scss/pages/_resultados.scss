@@ -1,0 +1,253 @@
+@use "../../scss/base/variables" as v;
+
+.page-resultados {
+    background-color: v.$cor-fundo;
+    margin-top: 90px;
+    height: calc(100vh - 90px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.main-resultados {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 48px;
+    width: calc(100% - 360px);
+    color: v.$cor-texto;
+    margin-left: 360px;
+
+    .resultados-topo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1700px;
+        margin-bottom: 32px;
+        
+        h1 {
+            font-size: 3rem;
+            font-family: Poppins;
+            font-weight: 700;
+        }
+    }
+
+}
+
+.container-cards-resultados {
+    display: grid;
+    grid-template-columns: repeat(3, 420px);
+    gap: 5.7%;
+}
+
+.card-resultados {
+    width: 420px;
+    height: 168px;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    background: v.$cor-secundaria;
+    box-shadow: 0 4px 12px 0 rgba(13, 10, 44, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    font-family: Poppins;
+    font-weight: 700;
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+}
+
+.filtro-resultados {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 16px;
+    font-family: Poppins;
+    position: relative;
+    margin: 20px 0;
+
+    p {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        line-height: 1;
+
+        i {
+            font-size: 1.5rem;
+        }
+    }
+
+    .dropdown {
+        position: relative;
+
+        .btn-resultados {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: 99px;
+            height: 45px;
+            border-radius: 12px;
+            color: v.$cor-texto;
+            font-weight: 500;
+            padding: 6px 12px;
+            border: none;
+            background-color: v.$cor-secundaria;
+            cursor: pointer;
+            transition: all .12s ease-in;
+
+            &:hover {
+                background-color: #3d619663;
+            }
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            padding: 8px 0;
+            min-width: 140px;
+            transition: opacity 0.2s ease, visibility 0.2s ease;
+
+            li {
+                padding: 8px 16px;
+                cursor: pointer;
+                transition: background .2s;
+
+                &:hover {
+                    background-color: #f0f0f0;
+                }
+            }
+        }
+
+        &:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.tabela-resultados {
+    width: 100%;
+    max-width: 1430px;
+    padding: 65px;
+    flex: 1;
+    margin-top: auto;
+    border-radius: 20px;
+    background: v.$cor-secundaria;
+    font-family: Poppins;
+    margin-top: 18px;
+    color: #fff;
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    hr {
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+            text-align: left;
+            padding: 15px 20px;
+        }
+
+        thead th {
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1rem;
+        }
+
+        tbody td {
+            font-weight: 500;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+        }
+    }
+
+    .btn-acao {
+        background-color: #0B2343;
+        border: none;
+        border-radius: 6px;
+        padding: 5px 15px;
+        color: #fff;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all .12s ease-in;
+
+        &:hover {
+            background-color: #426da51a;
+        }
+    }
+}
+
+@media (max-width: 1728px) {
+    .container-cards-resultados {
+        display: grid;
+        grid-template-columns: repeat(3, 338px);
+        gap: 18px;
+    }
+
+    .card-resultados {
+        width: 338px;
+        height: auto;
+    }
+
+    .main-resultados {
+
+        .btn-baixar {
+            margin-right: 22px;
+        }
+    }
+
+    .tabela-resultados {
+        max-width: 1050px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .container-cards-resultados {
+        display: grid;
+        grid-template-columns: repeat(3, 305px);
+        gap: 18px;
+    }
+
+    .card-resultados {
+        width: 305px;
+        height: auto;
+    }
+
+    .main-resultados {
+
+        .btn-baixar {
+            margin-right: 22px;
+        }
+    }
+
+    .tabela-resultados {
+        max-width: 955px;
+    }
+}

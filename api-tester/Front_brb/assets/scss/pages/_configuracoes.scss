@@ -1,0 +1,144 @@
+@use "../../scss/base/variables" as v;
+
+.page-configuracoes {
+    background-color: v.$cor-fundo;
+    margin-top: 90px;
+    height: calc(100vh - 90px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.main-configuracoes {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 48px;
+    color: v.$cor-texto;
+    margin-left: 360px;
+
+    .configuracoes-topo {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 1700px;
+        margin-bottom: 32px;
+
+        h1 {
+            font-size: 3rem;
+            font-family: Poppins;
+            font-weight: 700;
+        }
+
+    }
+
+    h2 {
+        color: v.$cor-texto;
+        font-family: "Poppins", sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        margin: 31px 0;
+    }
+
+    p,
+    label {
+        color: #BEBEBE;
+        font-family: "Nunito", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+   
+    #btn-alterar {
+        width: 150px;
+        height: 34px;
+        border: none;
+        border-radius: 12px;
+        background-color: v.$cor-secundaria;
+        margin-top: 31px;
+        color: v.$cor-texto;
+        font-family: "Nunito", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        transition: all .12s ease-in;
+     }
+
+
+    .texto-configuracoes {
+        display: flex;
+    }
+
+    .texto {
+        position: relative;
+        left: 177px;
+    }
+
+    .texto-email {
+        position: relative;
+        left: 181px;
+    }
+
+    .texto-projeto {
+        position: relative;
+        left: 97px;
+    }
+
+    .texto-ambiente {
+        position: relative;
+        left: 153px;
+    }
+
+    .texto-url {
+        position: relative;
+        left: 153px;
+    }
+
+    .checkbox-label {
+        display: flex;
+        gap: 20px;
+    }
+
+    .texto-canal {
+        position: relative;
+        left: 190px;
+    }
+
+    .texto-frequencia {
+        position: relative;
+        left: 148px;
+    }
+
+    .texto-integracoes {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 31px;
+
+        a {
+            text-decoration: none;
+            color: #2074f3f1;
+            transition: color .5s ease-out;
+
+            &:hover {
+                color: #104abf;
+            }
+        }
+    }
+
+    #btn-salvar {
+        width: 180px;
+        height: 34px;
+        border: none;
+        border-radius: 12px;
+        font-family: "Nunito", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        background-color: v.$cor-secundaria;
+        color: #fff;
+        transition: all .12s ease-in;
+    }
+}
+
+#btn-salvar,
+#btn-alterar {
+    &:hover {
+        background-color: #3d619663;
+    }
+}

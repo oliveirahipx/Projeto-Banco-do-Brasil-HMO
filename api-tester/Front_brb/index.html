@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/favicon-bb.svg">
+    <link rel="stylesheet" href="./dist/css/main.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/login.js" defer></script> <title>Login</title>
+</head>
+<body class="page-login">
+<main>
+    <div class="container-enter">
+        <div class="content-enter">
+            <h1>entrar</h1>
+            <p>faça login para acessar seus testes e relatórios de API</p>
+
+            <form id="login-form">
+                <div class="container-email-senha">
+                    <div class="input-email">
+                        <input id="email" type="email" placeholder=" " required>
+                        <label for="email">E-mail</label>
+                    </div>
+                    <div class="input-senha">
+                        <input id="password" type="password" autocomplete required>
+                        <label for="password">Senha</label>
+                    </div>
+                </div>
+                <div class="container-check-forgot">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="checkChecked" checked>
+                        <label class="form-check-label" for="checkChecked">
+                            Lembrar-me
+                        </label>
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#">Esqueceu a senha?</a>
+                    </div>
+                </div>
+                <div class="btn-enter">
+                    <button type="submit" id="btn-login">entrar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</main>
+</body>
+</html>

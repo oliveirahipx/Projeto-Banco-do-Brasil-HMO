@@ -1,0 +1,12 @@
+@use "../../node_modules/bootstrap/scss/bootstrap" as *;
+@use "../scss/base/reset";
+@use "../scss/base/index" as v;
+@use "../scss/layout/layout";
+@use "../scss/components/index" as *;
+
+
+@use "./pages/login";
+@use "./pages/resumo";
+@use "./pages/api";
+@use "./pages/resultados";
+@use "./pages/configuracoes";

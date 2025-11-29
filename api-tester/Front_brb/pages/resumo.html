@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon-bb.svg">
+    <link rel="stylesheet" href="../dist/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="module" src="../assets/js/base.js"></script>
+    <script type="module" src="../assets/js/chart-loader.js"></script>
+
+    <title>Resumo</title>
+</head>
+<body class="page-resumo">
+<header>
+    <div class="logo">
+        <img src="../assets/images/logo-bb.webp" alt="Logo Banco do Brasil">
+    </div>
+    <div class="foto-perfil">
+        <img src="../assets/images/perfil.webp" alt="Avatar perfil">
+    </div>
+</header>
+<div class="layout">
+    <aside>
+        <nav class="sidebar">
+            <ul class="nav flex-column">
+                <li><a href="../pages/resumo.html"><i class="bi bi-journal-text"></i> Resumo</a></li>
+                <li><a href="../pages/api.html"><i class="bi bi-broadcast"></i> APIs</a></li>
+                <li><a href="../pages/resultados.html"><i class="bi bi-bar-chart"></i> Resultados</a></li>
+                <li><a href="../pages/configuracoes.html"><i class="bi bi-gear"></i> Configurações</a></li>
+                <li><a href="#" class="logout mt-auto logout-red logout-modal"><i class="bi bi-box-arrow-right"></i>
+                    Sair</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <dialog class="dialog-sair">
+        <p>Tem certeza que quer sair?</p>
+        <div class="container-btn">
+            <a href="../index.html">
+                <button class="btn-sim">Sim</button>
+            </a>
+            <button class="btn-nao">Não</button>
+        </div>
+    </dialog>
+    <main class="main-content main-resumo">
+        <div class="resumo-topo">
+            <h1>Resumo</h1>
+            <button class="btn-baixar"><i class="bi bi-download"></i> Baixar PDF</button>
+        </div>
+        <section class="container-cards-resumo">
+            <article class="card-resumo" id="resumo-total-testes">
+                <h2>Total de Testes</h2>
+                <p>0</p>
+            </article>
+            <article class="card-resumo" id="resumo-sucesso">
+                <h2>Sucesso</h2>
+                <p>0</p>
+            </article>
+            <article class="card-resumo" id="resumo-falhas">
+                <h2>Falhas</h2>
+                <p>0</p>
+            </article>
+
+            <article class="card-resumo card-historico">
+                <h2>Histórico (Últimos 7 dias)</h2>
+                <canvas id="grafico"></canvas>
+            </article>
+        </section>
+
+        <section class="tabela-resultados">
+            <h2>Resultados de Teste</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>API</th>
+                    <th>Data</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Exemplo</td>
+                    <td>00/00/0000 00:00</td>
+                    <td>Sucesso</td>
+                    <td><button class="btn-acao">Ver</button></td>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</div>
+</body>
+</html>
